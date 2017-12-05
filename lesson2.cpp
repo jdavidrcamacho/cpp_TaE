@@ -1,18 +1,19 @@
-#include <iostream> //processes a source file before it compiles it 
+#include <iostream>  
 
-int main()									//header
-{										//start of function body
 using namespace std;
 
-int mynumber; 									//integer
-mynumber = 20;
+int main()								//header
+{										//start of function body
 
-cout << "My number is "; 							//output in console
-cout << mynumber << endl;
+int mynumber; 							//integer
+mynumber = 20;							//giving a value to mynumber
 
-return 0;
+cout << "My number is "; 				//output in console
+cout << mynumber << endl;				//output and new line
+
+return 0;								//return statement
 }										//end of function body
 
-										//to run in terminal do
-										// $ g++ new.cpp -o main
-										// $ ./main
+//to run in terminal do
+// $ g++ lesson2.cpp -o main
+// $ ./main

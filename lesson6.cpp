@@ -5,21 +5,14 @@ using namespace std;
 int main()								//header
 {										//start of function body
 
-int a;
-int b;
-int sum;
+int mynum = 99; 						//set a value to mynum
+mynum = 76;								//resetting the value of mynum
 
-cout << "The numbers are \n";
-cin >> a;
-cout << "and \n";
-cin >> b;
-
-sum = a + b;
-cout << "The sum is " << sum << endl;
+cout << mynum << endl;
 
 return 0;
 }										//end of function body
 
 //to run in terminal do
-// $ g++ lesson5.cpp -o main
+// $ g++ lesson6.cpp -o main
 // $ ./main

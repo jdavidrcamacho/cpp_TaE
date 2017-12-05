@@ -1,8 +1,9 @@
 #include <iostream> //processes a source file before it compiles it 
 
+using namespace std;
+
 int main()									//header
 {										//start of function body
-using namespace std;
 
 int itsanumber; 								//integer
 cout << "How many do you want?" << endl;
@@ -16,6 +17,6 @@ cout << itsanumber << endl;
 return 0;
 }										//end of function body
 
-										//to run in terminal do
-										// $ g++ new.cpp -o main
-										// $ ./main
+//to run in terminal do
+// $ g++ lesson4.cpp -o main
+// $ ./main
