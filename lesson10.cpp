@@ -2,13 +2,20 @@
 
 using namespace std;
 
-int main()								//header
-{										//start of function body
+void printStuff(int x)	//header
+{			//start of function body
+cout << "The number is " << x << endl;
 
+}			//end of function body
+
+
+int main() 	//header
+{		//start of function body
+printStuff(80);
 
 return 0;
-}										//end of function body
+}		//end of function body
 
 //to run in terminal do
-// $ g++ lesson7.cpp -o main
+// $ g++ lesson10.cpp -o main
 // $ ./main
