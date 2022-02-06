@@ -29,3 +29,13 @@ float rectangle(float length, float width){
     answer = length * width;
     return answer;
 }
+
+//mean of a vector
+float mean(vector<float> data){
+    float m = 0;
+    for (int n = 0; n < data.size(); n++){
+        m += data[n];
+    }
+    answer = m / data.size();
+    return answer;
+}
