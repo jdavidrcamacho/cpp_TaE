@@ -5,15 +5,7 @@
 
 using namespace std;
 
-ifstream infile;
 
-vector<float> t;
-vector<float> y;
-vector<float> yerr;
-
-string line;
-float element1, element2, element3;
-int n; 
 
 //main function
 int main(){
