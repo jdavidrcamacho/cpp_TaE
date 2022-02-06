@@ -6,9 +6,10 @@
 using namespace std;
 
 ifstream infile;
-vector<int> t;
-vector<int> y;
-int element;
+vector<float> t;
+vector<float> y;
+vector<float> yerr;
+float element;
 int n; 
 
 //main function
@@ -27,6 +28,8 @@ int main(){
             t.push_back(element);
             infile >> element;
             y.push_back(element);
+            infile >> element;
+            yerr.push_back(element);
             ++num;
          }
         infile.close(); // Close the file.
@@ -37,6 +40,11 @@ int main(){
             cout << y[n] << " ";
         }
         cout << endl;
+        cout << "The error is: ";
+        for (n = 0; n < y.size(); n++){
+            cout << yerr[n] << " ";
+        }
+        cout << endl;
     }
 
     cout << "bye bye" << endl;
@@ -45,5 +53,5 @@ int main(){
 //end of main function
 
 //to run in terminal do
-// $ g++ main.cpp -o run
-// $ ./run
+// $ make main
+// $ ./main
