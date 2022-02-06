@@ -8,9 +8,12 @@
 using namespace std;
 
 ifstream infile;
+
 vector<float> t;
 vector<float> y;
 vector<float> yerr;
+vector<float> result;
+
 string line;
 float element;
 int n; 
@@ -49,6 +52,10 @@ int main(){
         cout << endl;
         element = mean(y);
         cout << "The mean is: " << element << endl;
+        
+        // RMS 
+        float res = rms(y, linearFunc(t, 1, 0));
+        cout << "RMS is: " << res << endl;
     }
 
     cout << "Bye" << endl;
