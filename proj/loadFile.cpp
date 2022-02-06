@@ -1,29 +1,32 @@
-// main.cpp file
+// loadFile.cpp file
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <cmath>
-#include "functions.cpp"
-#include "main.h"
 
 using namespace std;
+
+ifstream infile;
+
+vector<float> t;
+vector<float> y;
+vector<float> yerr;
+
+string line;
+float element1, element2, element3;
+int n; 
 
 //main function
 int main(){
     cout << "Welcome" << endl;
 
-    int num = 0;
     infile.open("data.txt");
-    bool header = true;
+    bool header = false;
 
     if (infile.fail()){
         cout << "Error reading file!";
     } else{
         // Push items into a vector
         while (!infile.eof()){
-            if (header == true){
-                getline(infile, line); //just skip the header line 
-            }
             infile >> element1 >> element2 >> element3;
             if(infile.eof() ) break;
             t.push_back(element1);
@@ -32,26 +35,12 @@ int main(){
          }
         infile.close(); // Close the file.
 
-
         // Display the data:
         cout << "The data is: ";
         for (n = 0; n < y.size(); n++){
             cout << y[n] << " ";
         }
-        cout << endl;
-        element = mean(y);
-        cout << "The mean is: " << element << endl;
-        
-        // RMS 
-        float res = rms(y, linearFunc(t, 1, 0));
-        cout << "RMS is: " << res << endl;
+        cout << endl; 
     }
-
-    cout << "Bye" << endl;
-    return 0;
+return 0;
 }
-//end of main function
-
-//to run in terminal do
-// $ make main
-// $ ./main
