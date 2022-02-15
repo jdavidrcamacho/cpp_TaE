@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1534154065 source:/home/joaocamacho/Dropbox/cpp/15th_prog/src/meinclass.cpp
+	<iostream>
+	"meinclass.h"
+
+1534154064 /home/joaocamacho/Dropbox/cpp/15th_prog/include/meinclass.h
+
